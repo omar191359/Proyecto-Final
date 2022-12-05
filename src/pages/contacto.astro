@@ -1,0 +1,146 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Contacto | Morthlet" descripcion="" palabras="">
+<main>
+	<!--SECCIÓN BANNER CONTACTO -->
+	<section class= "principal2 container-fluid text-center position-relative">
+		<div class= "row">
+			<div class="col-12 bannerContacto"></div>
+			<div class="gradienteNegro2"></div>
+		</div>
+	</section>
+	
+	<!--SECCIÓN DE FORMULARIO DE CONTACTO-->
+	<section class="container-fluid py-3 contacto">
+		<!--Titular Contacto e información-->
+		<div class="row justify-content-md-center logoContacto">
+			<img src="/logo.png" alt="Imagen de fondo para ejemplo" id="Logotipo2">
+		</div>
+		<!--Formulario-->
+		<div class="container-fluid" 
+		data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+			<div class="infoContacto">
+				<h1>CONTACTO</h1>
+				<p>¿Tienes alguna duda o necesitas alguna cotización?</p>
+			</div>
+			<div class="row justify-content-md-center formulario">
+				<div class="col-lg-6 col-md-6">
+					<form action="/data" id="Formulario" method="get">
+						<div class="my-1">
+							<label for="Nombre">Escribe tu nombre completo:</label>
+							<input
+								type="text"
+								name="nombre"
+								class="form-control"
+								id="Nombre"
+								required
+							/>
+						</div>
+						<div class="my-1">
+							<label for="Correo">Escribe tu correo electrónico:</label>
+							<input
+								type="email"
+								name="correo"
+								class="form-control"
+								id="Correo"
+								required
+							/>
+						</div>
+						<div class="mb-1">
+							<label for="Tel">Escribe tu teléfono:</label>
+							<input
+								type="tel"
+								name="telefono"
+								class="form-control"
+								id="Tel"
+							/>
+						</div>
+						<div class="mb-1">
+							<label for="Mensaje">Escribe tu mensaje:</label>
+							<textarea
+								name="mensaje"
+								class="form-control"
+								id="Mensaje"
+								required></textarea>
+						</div>
+						<div class="col-12 pt-1 text-center">
+							<button type="submit" class="botonContacto" name="enviar">
+								ENVIAR
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- MODAL DE CONFIRMACIÓN -->
+	<div
+		class="modal fade"
+		id="modalFunciona"
+		tabindex="-1"
+		aria-labelledby="exampleModalLabel"
+		aria-hidden="true"
+	>
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">
+						Enviado correctamente
+					</h5>
+					<button
+						type="button"
+						class="btn-close"
+						data-bs-dismiss="modal"
+						aria-label="Close"></button>
+				</div>
+				<div class="modal-body">A continuación se abrirá su aplicación de correo para envíar la información</div>
+				<div class="modal-footer">
+					<button
+						type="button"
+						class="btn btn-secondary"
+						data-bs-dismiss="modal">Entendido</button
+					>						
+				</div>
+			</div>
+		</div>
+	</div>	
+
+</main> 
+<!-- Termina contenido visible  -->
+
+<!-- CÓDIGO EN JAVASCRIPT PARA ENVIAR EL EVENTO GET  -->
+<script is:inline>
+	window.addEventListener("DOMContentLoaded", (event) => {
+		const formulario = document.getElementById("Formulario");
+		formulario.addEventListener("submit", (event) => {
+			event.preventDefault();
+
+			const formData = new FormData(formulario);
+			var data = {};
+			for (var pair of formData.entries()) {
+				data = {...data, [pair[0]] : pair[1]}    				
+  			}			
+
+			const referencia =
+				"mailto:morthlet@gmail.com?subject=Quiero%20más%20información%20sobre%20tus%20servicios&body=Nombre:%20" +
+				data.nombre +
+				"%0D%0ACorreo:%20" +
+				data.correo +
+				"%0D%0ATelefono:%20" +
+				data.tel +
+				"%0D%0AMensaje:%20" +
+				data.mensaje;
+
+			const enlace = document.createElement("a");
+			enlace.href = referencia;
+			enlace.click();
+
+			const modalConfirmacion = new bootstrap.Modal(document.getElementById("modalFunciona"), {});				
+			modalConfirmacion.show();
+		});
+	});
+</script>
+</Layout>

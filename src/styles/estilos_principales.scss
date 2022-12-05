@@ -1,0 +1,812 @@
+$spacer: 5rem;
+$color1: #1FA9C9;
+$color2: #F9417F;
+$color3: white;
+$gradiente: linear-gradient(to right, #1FA9C9 , #F9417F);
+$gradienteInvertido: linear-gradient(to left, #1FA9C9 , #F9417F);
+
+
+
+//para modificar variables de bootstrap se modifican abajo del código pegado aquí abajo
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+//para importar fuentes externas se va a Google Fonts > se selecciona la fuente y se busca linea @import
+//@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;1,200;1,300;1,400;1,500&family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+//formato para declarar fuentes externas en el siguiente código:
+
+/*
+@font-face{
+    font-family: "Open Sans";
+    src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"), url("/fonts/OpenSans-Regular-webfont.woff")
+    format("woff");
+    font-weight: 400;
+}
+*/
+
+
+/*--------------------------------------------------------------
+# Back to Top
+--------------------------------------------------------------*/
+#btn-back-to-top {
+  background-color: $color2;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: none;
+  stroke: none;
+  border: none;
+  transition: all 0.5s ease 0s;
+  scroll-behavior: smooth!important;
+    &:hover{
+        background-color: $color1;
+        text-decoration: none;
+    }
+}
+
+/*--------------------------------------------------------------
+# ESTILOS GENERALES
+--------------------------------------------------------------*/
+h1{
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+h2{
+    color: white;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin: 0;
+}
+h3{
+    color: #F9417F;
+    font-size: 17px;
+    font-weight: 600;
+    margin: 0;  
+    margin-top: 20px;  
+}
+h4{
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+h5{
+  margin-bottom: 0;
+  text-align: end;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    overflow-x: hidden;
+}
+footer{
+    background-image: linear-gradient(to right, #1FA9C9 , #F9417F); 
+}
+nav{
+    background-image: linear-gradient(#000000,#00000000);
+    transition: all 0.5s;
+    height: 80px;
+}
+.gradienteNav{
+    height: 15px;
+    max-width: 100%;
+    background-image: linear-gradient(to right, #1FA9C9 , #F9417F);
+}
+.navbar-nav > li a{
+    color: white; 
+    align-items: center;
+    font-weight: 500;
+    font-size: 15px;
+}
+.navbar-brand{
+    color: white !important;
+    font-size: 30px;
+    letter-spacing: 7px;
+    font-weight: 600;
+}
+.navbar-scrolled{
+    background-image: linear-gradient(to right, #1FA9C9 , #F9417F);
+    opacity: 0.9;
+    height: 55px;
+    padding: 0;
+}
+.nav-link{
+    padding: 0 20px 0 20px;
+}
+body::-webkit-scrollbar-track
+{
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+body::-webkit-scrollbar
+{
+  width: 14px;
+}
+body::-webkit-scrollbar-thumb
+{ 
+  box-shadow: inset 0 0 6px rgba(0,0,0,.5);
+  background:  black;
+}
+
+/*--------------------------------------------------------------
+# PÁGINA DE INDEX
+--------------------------------------------------------------*/
+.principal p{
+    font-size: 18px;
+    font-weight: 1000;
+    letter-spacing: 5px;
+}
+.principal p span{
+    font-weight: 400;
+}
+.bannerInicio{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/face-bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.gradienteNegro{
+    position: absolute;
+    bottom: 0;
+    height: 30vh;
+    width: 100%;
+    background-image: linear-gradient(#00000000 ,#000000);
+}
+.aboutme{
+	height: auto;
+	background-color: black;
+    align-items: center;
+}
+.aboutme .row{
+    padding-top: 100px;
+}
+#presentacion {
+    color: white;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+    padding: 0 50px;
+}
+#explicacion {
+    color: white;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 200;
+    line-height: 1.3;
+    padding: 0 50px;
+}
+#explicacion span {
+    font-weight: 500;
+}
+.sobreMi{
+    padding-top: 70px;
+    margin: 0px 20px;
+    align-items: center;
+}
+.retrato{
+    align-items: center;
+    padding-top: auto;
+    padding-bottom: 100px;
+}
+.botonGaleria{  
+    color: white;
+    padding: 6px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    cursor: pointer;
+    border: 1px solid white;
+    &:hover{
+        display: inline-block;
+        color: white;
+        border: 1px solid black;
+        background-color: #F9417F;
+        border-radius: 2rem;
+        text-decoration: none;
+        border: 1px solid black;
+    }
+}
+.servicios{
+    background-color: #000000;
+    height: auto;
+    padding-bottom: 50px;
+}
+.infoServicios{
+    padding: 100px 0px 50px 0px ;
+    text-align: center;
+}
+.infoDescargas{
+    padding: 100px 0px 50px 0px ;
+    text-align: center;
+}
+.segundaFila{
+    padding-bottom: 100px;
+}
+.col-md-9{
+    padding: 0px 0px 0px 0px;
+}
+.col-md-9 p{
+    font-size: 13px;
+}
+.iconosS{
+    filter: invert(48%) sepia(97%) saturate(387%) hue-rotate(144deg) brightness(98%) contrast(90%);
+    padding: 15px;
+    border: 3px solid white;
+    border-radius: 50px;
+    margin:0;
+}
+.elementoS:hover img{
+    filter: none;
+    background-color: #1FA9C9;
+    padding: 5px;
+    border: 3px solid #1FA9C9;
+    border-radius: 50px;
+    transition-duration: 0.2s;
+}
+.elementoS:hover h2{
+    color:#1FA9C9;
+    transition-duration: 0.2s;
+}
+.servicios .row{
+    margin: 20px 5px;
+}
+.descargas{
+    background-color: white;
+    height: auto;
+    color: black;
+}
+.elementoD p{
+    font-size: 13px;
+}
+.descargas h1{
+    color: black;
+}
+
+/*--------------------------------------------------------------
+# PÁGINA DE CONTACTO
+--------------------------------------------------------------*/
+.contacto{
+    background-color: #000000;
+    padding-left: 0;
+    padding-right: 0;
+}
+.bannerContacto{
+    height: 30vh;
+    width: 100vw;
+    background-image: url(/Banner5.webp);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.gradienteNegro2{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    height: 30vh;
+    width: 100%;
+    background-image: linear-gradient(#00000000 ,#000000);
+}
+label{
+    color: white; 
+    font-weight: 500;
+    text-align: center;
+ }
+.modal-header{
+    color: white;
+ }
+.modal-body{
+    color: white;
+ }
+.form-control{
+    background-image: $gradienteInvertido;
+    border: none;
+}
+.infoContacto{
+    padding: 0px ;
+    text-align: center;
+    bottom: 100px;
+    position: relative;
+}
+.logoContacto{
+    bottom: 200px;
+    position: relative;
+}
+#Logotipo2{
+    width: 250px;
+    padding: 0;
+    margin: 0;
+}
+.formulario{
+    position: relative;
+    bottom: 100px;
+}
+.formulario .textarea{
+    height: 800px;
+}
+.botonContacto{  
+    background-color: black;
+    color: white;
+    padding: 6px 42px;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 2px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
+    cursor: pointer;
+    border: 1px solid white;
+    &:hover{
+        display: inline-block;
+        border: 1px solid black;
+        background-color: #F9417F;
+        border-radius: 2rem;
+        text-decoration: none;
+        border: 1px solid black;
+    }    
+}
+
+/*--------------------------------------------------------------
+# PÁGINA DE GALERÍA
+--------------------------------------------------------------*/
+.bannerGaleria{
+    height: 30vh;
+    width: 100vw;
+    background-image: url(/Banner2.webp);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.fraseDos{
+  background-color: #000000;
+  height: 70vh;
+}
+.portafolio{
+    background-color: #000000;
+}
+.carrusel{
+    max-width: 85vw;
+}
+.infoGaleria{
+    color: #000000;
+    padding: 100px 50px 0px 50px;
+    text-align: center;
+    position: relative;
+}
+.infoGaleria h1{
+    color: #000000!important;
+}
+.portfolio{
+    padding-top: 30px;
+    padding-bottom: 80px;
+}
+.extra{
+    background-color: #000000;
+    height: auto;
+    padding-bottom: 50px;
+}
+.iconosE{
+  filter: invert(37%) sepia(90%) saturate(5504%) hue-rotate(314deg) brightness(97%) contrast(102%);
+  padding: 15px;
+  border: 3px solid white;
+  border-radius: 50px;
+  margin:0;
+}
+.elementoE:hover img{
+  filter: none;
+  background-color: #F9417F;
+  padding: 5px;
+  border: 3px solid #F9417F;
+  border-radius: 50px;
+  transition-duration: 0.2s;
+}
+.elementoE:hover h2{
+  color: #F9417F;
+  transition-duration: 0.2s;
+}
+.serviciosExtra{
+  background-color: #000000;
+}
+.serviciosExtra .row{
+  margin: 20px 5px;
+}
+
+
+/*--------------------------------------------------------------
+# PÁGINA DE SOBRE MÍ
+--------------------------------------------------------------*/
+.bannerSobremi{
+  height: 30vh;
+  width: 100vw;
+  background-image: url(/Banner1.webp);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.InfosobreMi{
+  background-color: black;
+  width: auto;
+  margin: 0;
+  padding: 100px 0px;
+}
+#sobreMi{
+  text-align: start;
+}
+.sobreMiExtendido{
+  padding-right: 50px;
+}
+.sobreMiExtendido p{
+  text-align: start;
+  margin-bottom: 0px;
+}
+#habilidades{
+  text-align: end;
+}
+.habilidades{
+  padding-left: 50px;
+}
+.habilidades p{
+  text-align: end;
+}
+.barraProgreso{
+  background-color: white;
+  z-index: 500;
+  padding: 0px;;
+}
+.barraProgreso p{
+  padding: 0px;
+  margin: 0px;
+  opacity: 0%;;
+}
+.rellenoProgresoPs{
+  background-image: $gradienteInvertido;
+  z-index: 999;
+  padding: 0px;
+  margin: 0px;
+  animation-name: rellenoPs;
+  animation-duration: 7s;
+}
+@keyframes rellenoPs{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 90%;
+  }
+}
+.rellenoProgresoAi{
+  background-image: $gradienteInvertido;
+  z-index: 999;
+  padding: 0px;
+  margin: 0px;
+  animation-name: rellenoAi;
+  animation-duration: 7s;
+}
+@keyframes rellenoAi{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
+  }
+}
+.rellenoProgresoPr{
+  background-image: $gradienteInvertido;
+  z-index: 999;
+  padding: 0px;
+  margin: 0px;
+  animation-name: rellenoPr;
+  animation-duration: 7s;
+}
+@keyframes rellenoPr{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 70%;
+  }
+}
+.rellenoProgresoAe{
+  background-image: $gradienteInvertido;
+  z-index: 999;
+  padding: 0px;
+  margin: 0px;
+  animation-name: rellenoAe;
+  animation-duration: 7s;
+}
+@keyframes rellenoAe{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 75%;
+  }
+}
+.rellenoProgresoBlender{
+  background-image: $gradienteInvertido;
+  z-index: 999;
+  padding: 0px;
+  margin: 0px;
+  animation-name: rellenoBlender;
+  animation-duration: 7s;
+}
+@keyframes rellenoBlender{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 60%;
+  }
+}
+.rellenoProgresoMaya{
+  background-image: $gradienteInvertido;
+  z-index: 999;
+  padding: 0px;
+  margin: 0px;
+  animation-name: rellenoMaya;
+  animation-duration: 7s;
+}
+@keyframes rellenoMaya{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 50%;
+  }
+}
+//Sección de Testimonios
+.carousel .carousel-indicators button {
+ width: 15px;
+ height: 15px;
+ border-radius: 100%;
+ margin: 0px 10px;
+}
+.infoTestimonios h1{
+  z-index: 999;
+  color: #000000;
+  padding-top: 100px;
+}
+.gradienteTes{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  background-image: $gradienteInvertido;
+  width: 100%;
+  height: 100px;
+  margin: 0px;
+}
+.gradienteTes p{
+  padding: 0px;
+  margin: 0px;
+  opacity: 0%;;
+}
+.imagenTes{
+  z-index: 999;
+}
+.testimonios{
+  width: auto;
+  padding: 50px 0px 100px 0px;
+  position: relative;
+}
+.testimonios h5{
+  font-weight: 700;
+}
+.testimoniosMobil{
+  display: none;
+}
+//Sección CV
+.curriculum{
+  background-color: #000000;
+  height: auto;
+  padding: 100px 0px;
+}
+#demo{
+  text-align: start;
+}
+#cv{
+  text-align: end;
+}
+
+/*--------------------------------------------------------------
+# DESACTIVAR ANIMACIONES AOS EN DISPOSITIVOS MOBILES 1
+--------------------------------------------------------------*/
+@media only screen and (max-width: 768px) {
+    .aos-animate {
+      -o-transition-property: none !important;
+      -moz-transition-property: none !important;
+      -ms-transition-property: none !important;
+      -webkit-transition-property: none !important;
+      transition-property: none !important;
+  
+      -o-transform: none !important;
+      -moz-transform: none !important;
+      -ms-transform: none !important;
+      -webkit-transform: none !important;
+      transform: none !important;
+  
+      -webkit-animation: none !important;
+      -moz-animation: none !important;
+      -o-animation: none !important;
+      -ms-animation: none !important;
+      animation: none !important;
+    }
+  }
+  @media only screen and (max-width : 768px) {
+    .animated {
+        /*CSS transitions*/
+        -o-transition-property: none !important;
+        -moz-transition-property: none !important;
+        -ms-transition-property: none !important;
+        -webkit-transition-property: none !important;
+        transition-property: none !important;
+        /*CSS transforms*/
+        -o-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -webkit-transform: none !important;
+        transform: none !important;
+        /*CSS animations*/
+        -webkit-animation: none !important;
+        -moz-animation: none !important;
+        -o-animation: none !important;
+        -ms-animation: none !important;
+        animation: none !important;
+    }
+}
+/*--------------------------------------------------------------
+# DESACTIVAR ANIMACIONES AOS EN DISPOSITIVOS MOBILES 2
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+   [data-aos-delay] {
+     transition-delay: 0 !important;
+   }
+  }
+  
+  /*--------------------------------------------------------------
+  # ESTILOS GALERÍA COMPLEJA (Presento)
+  --------------------------------------------------------------*/
+  .portfolio .portfolio-item {
+    margin-bottom: 30px;
+  }
+  .portfolio #portfolio-flters {
+    padding: 0;
+    margin: 0 auto 20px auto;
+    list-style: none;
+    text-align: center;
+  }
+  .portfolio #portfolio-flters li {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0px 15px 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #444444;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+  }
+  .portfolio #portfolio-flters li:hover,
+  .portfolio #portfolio-flters li.filter-active {
+    color: #fff;
+    background: $color1!important;
+  }
+  .portfolio #portfolio-flters li:last-child {
+    margin-right: 0;
+  }
+  .portfolio .portfolio-wrap {
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background: rgba(17, 17, 17, 0.6);
+  }
+  .portfolio .portfolio-wrap::before {
+    content: "";
+    background: rgba(17, 17, 17, 0.6);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all ease-in-out 0.3s;
+    z-index: 2;
+    opacity: 0;
+  }
+  .portfolio .portfolio-wrap img {
+    transition: all ease-in-out 0.3s;
+  }
+  .portfolio .portfolio-wrap .portfolio-info {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    transition: all ease-in-out 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 20px;
+  }
+  .portfolio .portfolio-wrap .portfolio-info h4 {
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+  }
+  .portfolio .portfolio-wrap .portfolio-info p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    margin: 0;
+    font-style: italic;
+  }
+  .portfolio .portfolio-wrap .portfolio-links {
+    text-align: center;
+    z-index: 4;
+  }
+  .portfolio .portfolio-wrap .portfolio-links a {
+    color: rgba(255, 255, 255, 0.4);
+    margin: 0 5px 0 0;
+    font-size: 28px;
+    display: inline-block;
+    transition: 0.3s;
+  }
+  .portfolio .portfolio-wrap .portfolio-links a:hover {
+    color: #fff;
+  }
+  .portfolio .portfolio-wrap:hover::before {
+    opacity: 1;
+  }
+  .portfolio .portfolio-wrap:hover img {
+    transform: scale(1.2);
+  }
+  .portfolio .portfolio-wrap:hover .portfolio-info {
+    opacity: 1;
+  }
+  
+  /*--------------------------------------------------------------
+  # Animaciones cargando
+  --------------------------------------------------------------*/
+  @-webkit-keyframes animate-loading {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes animate-loading {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
