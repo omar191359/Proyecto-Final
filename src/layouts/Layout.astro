@@ -34,8 +34,6 @@ const { title, palabras, descripcion } = Astro.props;
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" crossorigin="anonymous"></script>
 
-
-
 		<script is:inline>
 			AOS.init({
 				disable: 'mobile'});
@@ -58,11 +56,12 @@ const { title, palabras, descripcion } = Astro.props;
 		<!--NavBar-->	
 		<nav class="navbar navbar-expand-sm position-fixed sticky-top container-fluid" >
 	    <div class="gradienteNav position-fixed sticky-top container-fluid"></div>
-
 			<div class="contenidoNavbar container">
 			  <a class="navbar-brand" href="/">MORTHLET</a>
-			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
+			  <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+			   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+			   aria-expanded="false" aria-label="Toggle navigation">
+				<img src="/icons/lines-w.svg" src="/icons/lines-w.svg" class="navbar-toggler-icon">
 			  </button>
 			  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
 			    <ul class="navbar-nav ">
@@ -73,10 +72,10 @@ const { title, palabras, descripcion } = Astro.props;
 					<a class="nav-link" aria-current="page" href="/sobremi">SOBRE MÍ</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" href="/galeria">GALERÍA</a>
+					<a class="nav-link" href="/galeria">PORTAFOLIO</a>
 				  </li>
 				  <li class="nav-item">
-					<a class="nav-link" aria-current="page" href="/">PROYECTOS</a>
+					<a class="nav-link" aria-current="page" href="/proyecto">PROYECTOS</a>
 				  </li>
 				  <li class="nav-item">
 					<a class="nav-link" aria-current="page" href="/contacto">CONTACTO</a>
@@ -92,10 +91,9 @@ const { title, palabras, descripcion } = Astro.props;
 		class="btn btn-danger btn-floating btn-lg"
 		id="btn-back-to-top"
 		>
-		<i class="fas fa-arrow-up"></i>
+		<p>arriba</p><img src="icons/flecha-up-w.svg" class="icon">
 		</button>
 
-		
 		<!--Todo lo que aparece de Layout en otros archivos aparecerá aquí (slot)-->
 		<slot />
 

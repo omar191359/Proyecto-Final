@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="Sobre mí | Morthlet" descripcion="" palabras="">
 	<main id="paginaSobremi">
     
-    <!--SECCIÓN BANNER SOBRE MÍ -->
+    <!--SECCIÓN BANNER SOBRE MÍ-->
 	<section class= "principal2 container-fluid text-center position-relative">
 		<div class= "row">
 			<div class="col-12 bannerSobremi"></div>
@@ -13,7 +13,7 @@ import Layout from "../layouts/Layout.astro";
 		</div>
 	</section>
 
-    <!--SECCIÓN INFORMACIÓN SOBRE MÍ -->
+    <!--SECCIÓN INFORMACIÓN SOBRE MÍ-->
     <section class= "InfosobreMi container-fluid text-center position-relative">
       <div class="container-fluid" 
 			data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000" data-aos-anchor-placement="center-bottom">
@@ -143,28 +143,28 @@ import Layout from "../layouts/Layout.astro";
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="/testimonios-1.webp" class="d-block w-100 imagenTes" alt="Testimonio 1">
+                <img src="/images/2Aboutme/testimonios-1.webp" class="d-block w-100 imagenTes" alt="Testimonio 1">
                 <div class="carousel-caption d-none d-md-block">
                   <h5 class="text-center">Adrián Ramírez</h5>
                   <p>"Justo como lo estaba buscando, me encantó la atención y tu trabajo, ¡felicitaciones!"</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="/testimonios-2.webp" class="d-block w-100 imagenTes" alt="Testimonio 2">
+                <img src="/images/2Aboutme/testimonios-2.webp" class="d-block w-100 imagenTes" alt="Testimonio 2">
                 <div class="carousel-caption d-none d-md-block">
                   <h5 class="text-center">Adriana Ventura</h5>
                   <p>"Siempre tan atento a lo que pido, ¡me encanta tu trabajo, gracias!"</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="/testimonios-3.webp" class="d-block w-100 imagenTes" alt="Testimonio 3">
+                <img src="/images/2Aboutme/testimonios-3.webp" class="d-block w-100 imagenTes" alt="Testimonio 3">
                 <div class="carousel-caption d-none d-md-block">
                   <h5 class="text-center">Gerardo Sotomayor</h5>
                   <p>"Más que satisfecho con el resultado de mi logotipo. Superó mis expectativas ¡gracias!"</p>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="/testimonios-4.webp" class="d-block w-100 imagenTes" alt="Testimonio 4">
+                <img src="/images/2Aboutme/testimonios-4.webp" class="d-block w-100 imagenTes" alt="Testimonio 4">
                 <div class="carousel-caption d-none d-md-block">
                   <h5 class="text-center">Virginia Gutiérrez</h5>
                   <p>"Entrega en tiempo y forma, estoy completamente satisfecha."</p>
@@ -199,16 +199,16 @@ import Layout from "../layouts/Layout.astro";
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="/testimoniosMobil-1.png" class="d-block w-100" alt="Testimonio 1">
+                <img src="/images/2Aboutme/testimoniosMobil-1.png" class="d-block w-100" alt="Testimonio 1">
               </div>
               <div class="carousel-item">
-                <img src="/testimoniosMobil-2.png" class="d-block w-100" alt="Testimonio 2">
+                <img src="/images/2Aboutme/testimoniosMobil-2.png" class="d-block w-100" alt="Testimonio 2">
               </div>
               <div class="carousel-item">
-                <img src="/testimoniosMobil-3.png" class="d-block w-100" alt="Testimonio 3">
+                <img src="/images/2Aboutme/testimoniosMobil-3.png" class="d-block w-100" alt="Testimonio 3">
               </div>
               <div class="carousel-item">
-                <img src="/testimoniosMobil-4.png" class="d-block w-100" alt="Testimonio 4">
+                <img src="/images/2Aboutme/testimoniosMobil-4.png" class="d-block w-100" alt="Testimonio 4">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -225,17 +225,28 @@ import Layout from "../layouts/Layout.astro";
     <!--SECCIÓN CV -->
     <section class="curriculum container-fluid text-center position-relative">
         <div class="row justify-content-center">
-            <div class="demoreel col-lg-5 col-md-8 text-center">
-                <h1 id="demo">DEMO REEL</h1>
-                <iframe width="100%"
-                    src="https://www.youtube.com/watch?v=IvjbMB2vuOI">
-                </iframe>
-            </div>
+            
+            <div class="cv col-lg-5 col-md-8 text-center">
+              <h1 id="demo">PORTFOLIO</h1>
+              <img src="/images/2Aboutme/Portfolio.png" alt="Descarga Portfolio" width="100%">
+              <a class="botonGaleria" href="./downloads/Portafolio_OmarRangel_V2022.pdf" download="Portafolio_OmarRangel_V2022">Descarga mi portafolio digital</a>
+          </div>
             <div class="cv col-lg-5 col-md-8 text-center">
                 <h1 id="cv">CV</h1>
-                <img src="/Curriculum.png" alt="Descarga CV" width="100%">
+                <img src="/images/2Aboutme/Curriculum.png" alt="Descarga CV" width="100%">
+                <a class="botonGaleria" href="./downloads/CV_OmarRangel_V2023.pdf" download="CV_OmarRangel_V2023">Descarga mi CV</a>
             </div>
         </div>
+
+        <div class="demoreel col-lg-5 col-md-5 container-fluid text-center position-relative">
+          <h1>DEMO REEL</h1>
+          <iframe 
+              width="100%" height="350" src="https://www.youtube.com/embed/IvjbMB2vuOI?controls=0" 
+              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+              encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+          </iframe>
+      </div>
+
     </section>
 
 

@@ -34,7 +34,7 @@ $gradienteInvertido: linear-gradient(to left, #1FA9C9 , #F9417F);
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 999;
+  z-index: 900;
   display: none;
   stroke: none;
   border: none;
@@ -44,6 +44,15 @@ $gradienteInvertido: linear-gradient(to left, #1FA9C9 , #F9417F);
         background-color: $color1;
         text-decoration: none;
     }
+}
+#btn-back-to-top img {
+  z-index: 900;
+  max-width: 25px;
+}
+#btn-back-to-top p {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
 }
 
 /*--------------------------------------------------------------
@@ -74,8 +83,8 @@ h3{
 h4{
     color: white;
     text-align: center;
-    font-size: 35px;
-    font-weight: 600;
+    font-size: 45px;
+    font-weight: 700;
     letter-spacing: 5px;
     margin-bottom: 10px;
 }
@@ -89,8 +98,10 @@ body{
     overflow-x: hidden;
 }
 footer{
-    background-image: linear-gradient(to right, #1FA9C9 , #F9417F); 
-}
+    background-image: url(images/pattern.png), linear-gradient(to right, #1FA9C9 , #F9417F); 
+    background-repeat: repeat, no-repeat;
+    background-size: contain, cover;
+} 
 nav{
     background-image: linear-gradient(#000000,#00000000);
     transition: all 0.5s;
@@ -150,7 +161,7 @@ body::-webkit-scrollbar-thumb
 .bannerInicio{
     height: 100vh;
     width: 100vw;
-    background-image: url(/face-bg.jpg);
+    background-image: url(images/1Index/intro-banner.webp);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -165,7 +176,10 @@ body::-webkit-scrollbar-thumb
 .aboutme{
 	height: auto;
 	background-color: black;
-    align-items: center;
+  background-image: url(images/pattern-fade.png);
+  background-repeat: repeat;
+  background-size: contain;
+  align-items: center;
 }
 .aboutme .row{
     padding-top: 100px;
@@ -175,19 +189,20 @@ body::-webkit-scrollbar-thumb
     margin: 0;
     font-size: 20px;
     font-weight: 500;
-    line-height: 1.4;
-    padding: 0 50px;
+    line-height: 1.6;
+    padding: 0 15px;
 }
 #explicacion {
     color: white;
     margin: 0;
     font-size: 15px;
     font-weight: 200;
-    line-height: 1.3;
-    padding: 0 50px;
+    line-height: 1.6;
+    padding: 0 25px;
+    padding-bottom: 25px;
 }
 #explicacion span {
-    font-weight: 500;
+    font-weight: 600;
 }
 .sobreMi{
     padding-top: 70px;
@@ -223,6 +238,9 @@ body::-webkit-scrollbar-thumb
 }
 .servicios{
     background-color: #000000;
+    background-image: url(images/pattern.png);
+    background-repeat: repeat;
+    background-size: contain;
     height: auto;
     padding-bottom: 50px;
 }
@@ -247,7 +265,7 @@ body::-webkit-scrollbar-thumb
     filter: invert(48%) sepia(97%) saturate(387%) hue-rotate(144deg) brightness(98%) contrast(90%);
     padding: 15px;
     border: 3px solid white;
-    border-radius: 50px;
+    border-radius: 5px;
     margin:0;
 }
 .elementoS:hover img{
@@ -255,7 +273,7 @@ body::-webkit-scrollbar-thumb
     background-color: #1FA9C9;
     padding: 5px;
     border: 3px solid #1FA9C9;
-    border-radius: 50px;
+    border-radius: 10px;
     transition-duration: 0.2s;
 }
 .elementoS:hover h2{
@@ -273,6 +291,9 @@ body::-webkit-scrollbar-thumb
 .elementoD p{
     font-size: 13px;
 }
+#descripciones{
+  padding-top: 10px;
+}
 .descargas h1{
     color: black;
 }
@@ -282,13 +303,16 @@ body::-webkit-scrollbar-thumb
 --------------------------------------------------------------*/
 .contacto{
     background-color: #000000;
+    background-image: url(images/pattern-fade.png);
+    background-repeat: repeat;
+    background-size: contain;
     padding-left: 0;
     padding-right: 0;
 }
 .bannerContacto{
     height: 30vh;
     width: 100vw;
-    background-image: url(/Banner5.webp);
+    background-image: url(images/5Contact/Banner5.webp);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -363,84 +387,21 @@ label{
 }
 
 /*--------------------------------------------------------------
-# PÁGINA DE GALERÍA
---------------------------------------------------------------*/
-.bannerGaleria{
-    height: 30vh;
-    width: 100vw;
-    background-image: url(/Banner2.webp);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.fraseDos{
-  background-color: #000000;
-  height: 70vh;
-}
-.portafolio{
-    background-color: #000000;
-}
-.carrusel{
-    max-width: 85vw;
-}
-.infoGaleria{
-    color: #000000;
-    padding: 100px 50px 0px 50px;
-    text-align: center;
-    position: relative;
-}
-.infoGaleria h1{
-    color: #000000!important;
-}
-.portfolio{
-    padding-top: 30px;
-    padding-bottom: 80px;
-}
-.extra{
-    background-color: #000000;
-    height: auto;
-    padding-bottom: 50px;
-}
-.iconosE{
-  filter: invert(37%) sepia(90%) saturate(5504%) hue-rotate(314deg) brightness(97%) contrast(102%);
-  padding: 15px;
-  border: 3px solid white;
-  border-radius: 50px;
-  margin:0;
-}
-.elementoE:hover img{
-  filter: none;
-  background-color: #F9417F;
-  padding: 5px;
-  border: 3px solid #F9417F;
-  border-radius: 50px;
-  transition-duration: 0.2s;
-}
-.elementoE:hover h2{
-  color: #F9417F;
-  transition-duration: 0.2s;
-}
-.serviciosExtra{
-  background-color: #000000;
-}
-.serviciosExtra .row{
-  margin: 20px 5px;
-}
-
-
-/*--------------------------------------------------------------
 # PÁGINA DE SOBRE MÍ
 --------------------------------------------------------------*/
 .bannerSobremi{
   height: 30vh;
   width: 100vw;
-  background-image: url(/Banner1.webp);
+  background-image: url(images/2Aboutme/Banner1.webp);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .InfosobreMi{
   background-color: black;
+  background-image: url(images/pattern-fade.png);
+  background-repeat: repeat;
+  background-size: contain;
   width: auto;
   margin: 0;
   padding: 100px 0px;
@@ -614,6 +575,9 @@ label{
 //Sección CV
 .curriculum{
   background-color: #000000;
+  background-image: url(images/pattern.png);
+  background-repeat: repeat;
+  background-size: contain;
   height: auto;
   padding: 100px 0px;
 }
@@ -622,6 +586,107 @@ label{
 }
 #cv{
   text-align: end;
+}
+.demoreel{
+  padding-top: 50px;
+}
+
+/*--------------------------------------------------------------
+# PÁGINA PROYECTOS
+--------------------------------------------------------------*/
+.bannerProyecto{
+  height: 30vh;
+  width: 100vw;
+  background-image: url(images/4Projects/Banner4.webp);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.proyecto1{
+  background-color: #000000;
+  background-image: url(images/pattern-fade.png);
+  background-repeat: repeat;
+  background-size: contain;
+  height: auto;
+  padding-bottom: 80px;
+}
+.proyecto2{
+  background-color: #000000;
+  background-image: url(images/pattern.png);
+  background-repeat: repeat;
+  background-size: contain;
+  height: auto;
+  padding-bottom: 80px;
+}
+.Introduccion h1{
+  padding: 20px 0px 20px 0px;
+}
+#introP1{
+  padding-top: 40px;
+  margin: 0;
+}
+.infoMoodboard{
+  color: #000000;
+  padding: 0px;
+}
+.infoMoodboard h1{
+  color: #000000;
+}
+.Moodboard{
+  width: 100vw;
+  padding: 80px 0px 55px 0px;
+}
+#moodP1{
+  color: #000000;
+  padding: 25px 40px 25px 40px;
+}
+.p1Mood{
+  width: auto;
+}
+.Produccion{
+  padding: 80px 0px 30px 0px;
+}
+.Produccion h1{
+  padding: 20px 0px 40px 0px;
+}
+.p1Prod{
+  width: 100%;
+}
+#prodP1{
+  padding-top: 0px;
+  margin: 0;
+}
+.botonProyectos{  
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  z-index: 999;
+  color: white;
+  border: 1px solid white;
+  background-color: transparent;
+  padding: 6px 32px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 4px 2px;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in;
+  cursor: pointer;
+  &:hover{
+      display: inline-block;
+      color: white!important;
+      border: 1px solid none;
+      background-color: #F9417F;
+      border-radius: 2rem;
+      text-decoration: none;
+      border: 1px solid #00000000!important;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -679,134 +744,206 @@ label{
    }
   }
   
-  /*--------------------------------------------------------------
-  # ESTILOS GALERÍA COMPLEJA (Presento)
-  --------------------------------------------------------------*/
-  .portfolio .portfolio-item {
-    margin-bottom: 30px;
+
+/*--------------------------------------------------------------
+# PÁGINA DE GALERÍA
+--------------------------------------------------------------*/
+.bannerGaleria{
+  height: 30vh;
+  width: 100vw;
+  background-image: url(images/3Portfolio/Banner2.webp);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.fraseDos{
+ background-color: #000000;
+ height: 70vh;
+}
+.portafolio{
+  background-color: #000000;
+}
+.carrusel{
+  max-width: 86vw;
+}
+.infoGaleria{
+  color: #000000;
+  padding: 100px 50px 0px 50px;
+  text-align: center;
+  position: relative;
+}
+.infoGaleria h1{
+  color: #000000!important;
+}
+.portfolio{
+  padding-top: 25px;
+  padding-bottom: 80px;
+}
+.portfolio h2{
+ letter-spacing: 0px;
+}
+.extra{
+  background-color: #000000;
+  height: auto;
+  padding-bottom: 50px;
+}
+.iconosE{
+  filter: invert(37%) sepia(90%) saturate(5504%) 
+  hue-rotate(314deg) brightness(97%) contrast(102%);
+  padding: 10px;
+  border: 3px solid white;
+  border-radius: 5px;
+  margin:0;
+}
+.elementoE:hover img{
+  filter: none;
+  background-color: #F9417F;
+  padding: 5px;
+  border: 3px solid #F9417F;
+  border-radius: 10px;
+  transition-duration: 0.2s;
   }
-  .portfolio #portfolio-flters {
-    padding: 0;
-    margin: 0 auto 20px auto;
-    list-style: none;
-    text-align: center;
-  }
-  .portfolio #portfolio-flters li {
-    cursor: pointer;
-    display: inline-block;
-    padding: 0px 15px 10px 15px;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1;
-    text-transform: uppercase;
-    color: #444444;
-    margin-bottom: 5px;
-    transition: all 0.3s ease-in-out;
-    border-radius: 3px;
-  }
-  .portfolio #portfolio-flters li:hover,
-  .portfolio #portfolio-flters li.filter-active {
-    color: #fff;
-    background: $color1!important;
-  }
-  .portfolio #portfolio-flters li:last-child {
-    margin-right: 0;
-  }
-  .portfolio .portfolio-wrap {
-    transition: 0.3s;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-    background: rgba(17, 17, 17, 0.6);
-  }
-  .portfolio .portfolio-wrap::before {
-    content: "";
-    background: rgba(17, 17, 17, 0.6);
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    transition: all ease-in-out 0.3s;
-    z-index: 2;
-    opacity: 0;
-  }
-  .portfolio .portfolio-wrap img {
-    transition: all ease-in-out 0.3s;
-  }
-  .portfolio .portfolio-wrap .portfolio-info {
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 3;
-    transition: all ease-in-out 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-start;
-    padding: 20px;
-  }
-  .portfolio .portfolio-wrap .portfolio-info h4 {
-    font-size: 20px;
-    color: #fff;
-    font-weight: 600;
-  }
-  .portfolio .portfolio-wrap .portfolio-info p {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 14px;
-    text-transform: uppercase;
-    padding: 0;
-    margin: 0;
-    font-style: italic;
-  }
-  .portfolio .portfolio-wrap .portfolio-links {
-    text-align: center;
-    z-index: 4;
-  }
-  .portfolio .portfolio-wrap .portfolio-links a {
-    color: rgba(255, 255, 255, 0.4);
-    margin: 0 5px 0 0;
-    font-size: 28px;
-    display: inline-block;
-    transition: 0.3s;
-  }
-  .portfolio .portfolio-wrap .portfolio-links a:hover {
-    color: #fff;
-  }
-  .portfolio .portfolio-wrap:hover::before {
-    opacity: 1;
-  }
-  .portfolio .portfolio-wrap:hover img {
-    transform: scale(1.2);
-  }
-  .portfolio .portfolio-wrap:hover .portfolio-info {
-    opacity: 1;
-  }
+.elementoE:hover h2{
+  color: #F9417F;
+  transition-duration: 0.2s;
+}
+.serviciosExtra{
+  background-color: #000000;
+  background-image: url(images/pattern.png);
+  background-repeat: repeat;
+  background-size: contain;
+}
+.serviciosExtra .row{
+  margin: 20px 5px;
+}
+
+/*--------------------------------------------------------------
+# ESTILOS GALERÍA COMPLEJA (Presento)
+--------------------------------------------------------------*/
+.portfolio .portfolio-item {
+  margin-bottom: 20px;
+  padding: 0px 10px;
+}
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 20px auto;
+  list-style: none;
+  text-align: center;
+}
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  align-self: center;
+  padding: 10px 15px 10px 15px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #444444;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 3px;
+}
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  color: #fff;
+  background: $color1!important;
+}
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(17, 17, 17, 0.6);
+}
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background: rgba(17, 17, 17, 0.6);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+.portfolio .portfolio-wrap img {
+  transition: all ease-in-out 0.3s;
+}
+.portfolio .portfolio-wrap .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 20px;
+}
+.portfolio .portfolio-wrap .portfolio-info h4 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+.portfolio .portfolio-wrap .portfolio-info p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+}
+.portfolio .portfolio-wrap .portfolio-links {
+  text-align: center;
+  z-index: 4;
+}
+.portfolio .portfolio-wrap .portfolio-links a {
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0 5px 0 0;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+  color: #fff;
+}
+.portfolio .portfolio-wrap:hover::before {
+  opacity: 1;
+}
+.portfolio .portfolio-wrap:hover img {
+  transform: scale(1.2);
+}
+.portfolio .portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+}
   
-  /*--------------------------------------------------------------
-  # Animaciones cargando
-  --------------------------------------------------------------*/
-  @-webkit-keyframes animate-loading {
-    0% {
-      transform: rotate(0deg);
-    }
-  
-    100% {
-      transform: rotate(360deg);
-    }
+/*--------------------------------------------------------------
+# Animaciones cargando
+--------------------------------------------------------------*/
+@-webkit-keyframes animate-loading{
+  0% {
+    transform: rotate(0deg);
   }
-  
-  @keyframes animate-loading {
-    0% {
-      transform: rotate(0deg);
-    }
-  
-    100% {
-      transform: rotate(360deg);
-    }
+  100% {
+    transform: rotate(360deg);
   }
+}
+@keyframes animate-loading{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
   
 
