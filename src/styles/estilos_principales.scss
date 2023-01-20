@@ -176,7 +176,7 @@ body::-webkit-scrollbar-thumb
 .aboutme{
 	height: auto;
 	background-color: black;
-  background-image: url(images/pattern-fade.png);
+  background-image: url(/public/images/pattern-fade.png);
   background-repeat: repeat;
   background-size: contain;
   align-items: center;
@@ -238,7 +238,7 @@ body::-webkit-scrollbar-thumb
 }
 .servicios{
     background-color: #000000;
-    background-image: url(images/pattern.png);
+    background-image: url(/public/images/pattern.png);
     background-repeat: repeat;
     background-size: contain;
     height: auto;
@@ -303,7 +303,7 @@ body::-webkit-scrollbar-thumb
 --------------------------------------------------------------*/
 .contacto{
     background-color: #000000;
-    background-image: url(images/pattern-fade.png);
+    background-image: url(/public/images/pattern-fade.png);
     background-repeat: repeat;
     background-size: contain;
     padding-left: 0;
@@ -312,7 +312,7 @@ body::-webkit-scrollbar-thumb
 .bannerContacto{
     height: 30vh;
     width: 100vw;
-    background-image: url(images/5Contact/Banner5.webp);
+    background-image: url(/public/images/5Contact/Banner5.webp);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -392,14 +392,14 @@ label{
 .bannerSobremi{
   height: 30vh;
   width: 100vw;
-  background-image: url(images/2Aboutme/Banner1.webp);
+  background-image: url(/public/images/2Aboutme/Banner1.webp);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .InfosobreMi{
   background-color: black;
-  background-image: url(images/pattern-fade.png);
+  background-image: url(/public/images/pattern-fade.png);
   background-repeat: repeat;
   background-size: contain;
   width: auto;
@@ -575,7 +575,7 @@ label{
 //Sección CV
 .curriculum{
   background-color: #000000;
-  background-image: url(images/pattern.png);
+  background-image: url(/public/images/pattern.png);
   background-repeat: repeat;
   background-size: contain;
   height: auto;
@@ -597,14 +597,14 @@ label{
 .bannerProyecto{
   height: 30vh;
   width: 100vw;
-  background-image: url(images/4Projects/Banner4.webp);
+  background-image: url(/public/images/4Projects/Banner4.webp);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .proyecto1{
   background-color: #000000;
-  background-image: url(images/pattern-fade.png);
+  background-image: url(/public/images/pattern-fade.png);
   background-repeat: repeat;
   background-size: contain;
   height: auto;
@@ -612,7 +612,7 @@ label{
 }
 .proyecto2{
   background-color: #000000;
-  background-image: url(images/pattern.png);
+  background-image: url(/public/images/pattern.png);
   background-repeat: repeat;
   background-size: contain;
   height: auto;
@@ -751,7 +751,7 @@ label{
 .bannerGaleria{
   height: 30vh;
   width: 100vw;
-  background-image: url(images/3Portfolio/Banner2.webp);
+  background-image: url(/public/images/3Portfolio/Banner2.webp);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -809,7 +809,7 @@ label{
 }
 .serviciosExtra{
   background-color: #000000;
-  background-image: url(images/pattern.png);
+  background-image: url(/public/images/pattern.png);
   background-repeat: repeat;
   background-size: contain;
 }
